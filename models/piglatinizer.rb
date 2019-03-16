@@ -3,4 +3,6 @@ class PigLatinizer
     user_input = user_phrase.split(" ")
         split_phrase= user_input.collect {|word| piglatinize_word(word)}
         split_phrase.join(" ")
+      end
+    end
 end
