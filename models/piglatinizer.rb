@@ -1,12 +1,10 @@
 class PigLatinizer
   
   def piglatinize(user_phrase)
-    user_phrase.split(" ").collect { |word| piglatinize(word) }.join(" ")
+    user_phrase.split.map do |word|
+      piglatinize_each_word
+    end.join(' ')
   end
-   # user_phrase.split.map do |word|
-   #   piglatinize_each_word
-   # end.join(' ')
-  #end
   
   def piglatinize_each_word
     vowels = %w{a e i o u}
