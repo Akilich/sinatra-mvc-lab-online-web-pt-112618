@@ -6,7 +6,7 @@ class PigLatinizer
     end.join(' ')
   end
   
-  def piglatinize_each_word
+  def piglatinize_each_word(word)
     vowels = %w{a e i o u}
     word.each_char do |chr|
     index = word.index(chr)
